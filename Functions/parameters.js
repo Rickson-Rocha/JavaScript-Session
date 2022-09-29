@@ -23,4 +23,29 @@ function funcao({nome,sobrenome,idade}){
     console.log(nome,sobrenome,idade);
 }
 
-funcao({nome:'Rickson',sobrenome:'Rocha',idade:'23'})
+
+function funcao1([valor1,valor2,valor3]){
+    console.log(valor1,valor2,valor3);
+}
+
+funcao1(['Roberto Rickson','Rocha',20])
+
+function conta (operador,acumulador, ...numeros){
+    for(let numero of numeros){
+        switch(operador){
+            case '+':
+             acumulador +=numero;
+             break;
+             case '-':
+                acumulador -=numero;
+             break;
+             
+        }
+        
+    }
+    console.log(acumulador)
+     
+}
+conta('+',0,20,30,40,50)
+/* conta('+',0,[20,30,40,50]) */
+// rest operator
